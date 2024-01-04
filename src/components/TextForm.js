@@ -11,14 +11,14 @@ export default function TextForm(props) {
     let newtext = Text.toLowerCase();
     setText(newtext);
   };
-
+ 
   const handleOnChange = (event) => {
     // console.log("On Change");
     setText(event.target.value);
   };
   const handleClrClick = () => {
     // console.log("Clear Text Button Clicked");
-    let newtext = " ";
+    let newtext = ' ';
     setText(newtext);
   };
 
@@ -28,6 +28,7 @@ export default function TextForm(props) {
     msg.text = Text;
     window.speechSynthesis.speak(msg);
   };
+
 
   const [Text, setText] = useState("");
   // setText =("New Text")
@@ -81,10 +82,13 @@ export default function TextForm(props) {
         <p>
           {Text.split(" ").length} Words and {Text.length} Characters!
         </p>
-        <p>{0.08 * Text.split(" ").length} min time in which you can read !!</p>
+        <p>
+        {0.08 * Text.split(" ").length} min time in which you can read !!
+        </p>
         <h3>Preview Text</h3>
         <h4>In UpperCase!</h4>
         <p>{Text.toUpperCase()}</p>
+        
       </div>
       <div>
         <h4>In LowerCase!</h4>

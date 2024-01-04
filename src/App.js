@@ -1,25 +1,26 @@
 import "./App.css";
 import React from "react";
-// import About from "./components/About";
+import About from "./components/About";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  Link,
+} from "react-router-dom";
 
 function App() {
-  // const [mode, setMode] = useState('dark');
-  // const toggleMode =()=> {
-  //   if(mode === 'light'){
-  //   setMode('dark');
-  //   document.body.style.backgroundColor ='#042743';
-  //   }
-  //   else{
-  //     setMode('light');
-  //     document.body.style.backgroundColor ='white';
-  //   }
-  // }
   return (
     <>
-      <Navbar title="TextUtils" aboutTxt="Home" />
+      <Navbar title="TextUtils" aboutTxt="Home" homeTxt="About"/>
       <div className="container my-10">
+        <router>
+          <Switch>
+            <Route exact path="/" TextForm component={Home} />
+            <Route path="/about" component={About} />
+          </Switch>
+        </router>
         <TextForm
           heading="Enter The Text :"
           TextForm
