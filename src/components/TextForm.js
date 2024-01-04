@@ -33,10 +33,7 @@ export default function TextForm(props) {
   // setText =("New Text")
   return (
     <>
-      <div
-        className="container"
-        style={{ backgroundColor: props.mode === "dark" ? "white" : "#042743" }}
-      >
+      <div className="container">
         <div className="mb-3">
           <label htmlFor="exampleFormControlTextarea1" className="form-label">
             {props.heading}
@@ -46,17 +43,12 @@ export default function TextForm(props) {
             className="form-control"
             value={Text}
             onChange={handleOnChange}
-            style={{
-              backgroundColor: props.mode === "dark" ? "grey" : "white",
-              color: props.mode === "dark" ? "white" : "#042743",
-            }}
             id="exampleFormControlTextarea1"
             rows={8}
           />
           <button
             type="button"
             className="btn btn-primary mx-2"
-           
             onClick={handleUpClick}
           >
             {props.btn1}
@@ -64,7 +56,6 @@ export default function TextForm(props) {
           <button
             type="button"
             className="btn btn-primary mx-1"
-           
             onClick={handleLoClick}
           >
             {props.btn2}
@@ -72,7 +63,6 @@ export default function TextForm(props) {
           <button
             type="button"
             className="btn btn-primary mx-1"
-           
             onClick={handleClrClick}
           >
             {props.btn3}
@@ -80,17 +70,13 @@ export default function TextForm(props) {
           <button
             type="button"
             className="btn btn-primary mx-1"
-          
             onClick={speak}
           >
             {props.btn4}
           </button>
         </div>
       </div>
-      <div
-        className="container my-3"
-        style={{ backgroundColor: props.mode === "dark" ? "white" : "#042743" }}
-      >
+      <div className="container">
         <h2>Word Summary</h2>
         <p>
           {Text.split(" ").length} Words and {Text.length} Characters!
