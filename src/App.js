@@ -8,7 +8,7 @@ import TextForm from "./components/TextForm";
 function App() {
   return (
     <>
-      <Navbar title="Text-Analyzer" aboutTxt="Home" homeTxt="About"/>
+      <Navbar title="Text-Analyzer" aboutTxt="Home"/>
 
         <TextForm
           heading="Enter The Text :"
