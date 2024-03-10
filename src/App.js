@@ -1,6 +1,5 @@
 import "./App.css";
 import React from "react";
-import About from "./components/About";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 
@@ -8,7 +7,7 @@ import TextForm from "./components/TextForm";
 function App() {
   return (
     <>
-      <Navbar title="Text-Analyzer" aboutTxt="Home"/>
+      <Navbar title="Text-Analyzer"/>
 
         <TextForm
           heading="Enter The Text :"
@@ -18,7 +17,7 @@ function App() {
           btn3="Clear Text"
           btn4="Click to Listen Text"
         />
-        <About/>
+
     
     </>
   );
