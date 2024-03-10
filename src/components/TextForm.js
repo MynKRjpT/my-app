@@ -105,11 +105,9 @@ export default function TextForm(props) {
         <p>
           {0.08 * Text.split(" ").length} min time in which you can read !!
         </p>
-        <h3>Preview Text</h3>
+        <h3>Preview---</h3>
         <h4>In UpperCase!</h4>
         <p>{Text.toUpperCase()}</p>
-      </div>
-      <div style={myStyle}>
         <h3>In LowerCase!</h3>
         <p>{Text.toLowerCase()}</p>
       </div>
